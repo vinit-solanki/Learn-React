@@ -5,6 +5,7 @@ import ToggleBoxes from './ToggleBoxes';
 import ShoppingList from './ShoppingList';
 import SignUp from './SignUp';
 import NewForm from './NewForm';
+import Quotes from './Quotes';
 export default function MyApp() {
   const [count, setCount] = useState(0);
 
