@@ -16,6 +16,7 @@ function Boxes({numBoxes}) {
   }
   return (
     <div className='flex flex-col w-full h-full items-center justify-center gap-y-4 bg-white bg-opacity-10  p-4 rounded-lg'>
+      <p className='font-bold'>Tap to toggle.</p>
       <div className="grid text-center items-center justify-center gap-3 grid-cols-3 ">
         {boxes.map((box,idx) =>(
             <Box

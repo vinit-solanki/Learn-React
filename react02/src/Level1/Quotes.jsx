@@ -36,7 +36,7 @@ function Quotes() {
           onClick={getQuote}
           className="px-6 py-3 bg-black-600 hover:bg-none border-2 text-white font-semibold rounded-md shadow-md transition duration-300"
         >
-          Get New Quote
+          Get a New Quote
         </button>
       </div>
       <div className="w-full text-end"><button className="bg-green-700 p-2">Get Code</button></div>

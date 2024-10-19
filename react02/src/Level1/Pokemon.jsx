@@ -26,19 +26,11 @@ function Pokemon() {
 
   return pokemon ? (
     <div className="w-full h-full items-center text-justify justify-between flex flex-col bg-white bg-opacity-10 rounded-lg p-4 text-center items-center">
-      <div className="w-full flex text-center justify-center items-end flex-col p-2 text-end">
-        <button onClick={fetchPokemon} className="w-1/6 bg-white bg-opacity-20">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            x="0px"
-            y="0px"
-            width="30"
-            height="30"
-            viewBox="0 0 50 50"
-            >
-            <path d="M 25 2 A 1.0001 1.0001 0 1 0 25 4 C 36.609534 4 46 13.390466 46 25 C 46 36.609534 36.609534 46 25 46 C 13.390466 46 4 36.609534 4 25 C 4 18.307314 7.130711 12.364806 12 8.5195312 L 12 15 A 1.0001 1.0001 0 1 0 14 15 L 14 6.5507812 L 14 5 L 4 5 A 1.0001 1.0001 0 1 0 4 7 L 10.699219 7 C 5.4020866 11.214814 2 17.712204 2 25 C 2 37.690466 12.309534 48 25 48 C 37.690466 48 48 37.690466 48 25 C 48 12.309534 37.690466 2 25 2 z"></path>
-          </svg>
+      <div className="w-full flex flex-row text-center justify-center items-center gap-x-3 p-2 text-end">
+        <button onClick={fetchPokemon} className="bg-white bg-opacity-20">
+          Reload
         </button>
+        <a className="bg-yellow-700 p-2 text-white rounded-lg" href="https://my-pokemons-pearl.vercel.app/">Visit the Pokedex Website</a>
       </div>
       <p className="bg-black px-1 rounded-t-lg">Get a Random Pokemon</p>
       <div className="bg-black bg-opacity-30 p-4 rounded-3xl shadow-lg flex flex-col items-center gap-6 max-w-sm">
@@ -79,6 +71,7 @@ function Pokemon() {
           </div>
         </div>
       </div>
+      <div className="mt-2 w-full text-end"><button className="bg-green-700 p-2">Get Code</button></div>
     </div>
   ) : (
     <div className="w-full h-full items-center text-justify justify-between flex flex-col bg-white bg-opacity-10 rounded-lg p-4 text-center items-center gap-y-2">

@@ -7,7 +7,17 @@ import NormalForm from "./Level1/NormalForm";
 import Quotes from "./Level1/Quotes";
 import Pokemon from "./Level1/Pokemon";
 import Boxes from "./Level1/Boxes";
+import UseRefForm from "./Level2/useRefForm";
 import './App.css'
+import UserContextProvider from "./Level2/context/UserContextProvider";
+import Login from "./Level2/components/Login";
+import Profile from "./Level2/components/Profile";
+import { ThemeProvider } from "./Level2/context/ThemeContext";
+import Canvas from "./Level2/components/Canvas";
+import { CounterProvider } from "./Level2/context/CounterContext";
+import ParentCounter from "./Level2/components/ParentCounter";
+import ChildCounter from "./Level2/components/ChildCounter";
+import GrandChildCounter from "./Level2/components/GrandChildCounter";
 function App() {
   return (
     <>
@@ -67,6 +77,32 @@ function App() {
         </div>
         <div>
           <Pokemon />
+        </div>
+        <div>
+          <UseRefForm />
+        </div>
+        <div className="bg-white bg-opacity-10 rounded-lg p-3 flex flex-col justify-center">
+          <h2 className="text-2xl font-bold text-gray-500">Context API Form</h2>
+          <div>
+          <UserContextProvider>
+          <Profile/>
+          <Login/>
+          </UserContextProvider>
+          </div>
+        </div>
+        <div className="bg-white bg-opacity-10 rounded-lg p-3 flex flex-col justify-center">
+        <h2 className="text-2xl font-bold text-gray-500">Theme Togggler.</h2>
+        <div>
+        <ThemeProvider>
+          <Canvas/>
+        </ThemeProvider>
+        </div>
+        </div>
+        <div className="bg-white bg-opacity-10 rounded-lg p-3 flex flex-col justify-center">
+          <h2 className="text-2xl font-bold text-gray-500">Counters using Context API</h2>
+          <CounterProvider>
+            <ParentCounter/>
+          </CounterProvider>
         </div>
       </div>
     </>
