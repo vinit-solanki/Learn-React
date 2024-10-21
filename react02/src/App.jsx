@@ -90,19 +90,23 @@ function App() {
           </UserContextProvider>
           </div>
         </div>
-        <div className="bg-white bg-opacity-10 rounded-lg p-3 flex flex-col justify-center">
+        <div className="bg-white bg-opacity-10 rounded-lg p-3 flex flex-col justify-between gap-y-3">
         <h2 className="text-2xl font-bold text-gray-500">Theme Togggler.</h2>
         <div>
         <ThemeProvider>
           <Canvas/>
         </ThemeProvider>
         </div>
+        <div className="mt-2 w-full text-end"><button className="bg-green-700 p-2">Get Code</button></div>
         </div>
-        <div className="bg-white bg-opacity-10 rounded-lg p-3 flex flex-col justify-center">
+        <div className="bg-white bg-opacity-10 rounded-lg p-3 flex flex-col justify-between gap-y-3">
           <h2 className="text-2xl font-bold text-gray-500">Counters using Context API</h2>
+          <div>
           <CounterProvider>
             <ParentCounter/>
           </CounterProvider>
+          </div>
+        <div className="mt-2 w-full text-end"><button className="bg-green-700 p-2">Get Code</button></div>
         </div>
       </div>
     </>
