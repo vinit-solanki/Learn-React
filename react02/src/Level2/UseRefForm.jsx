@@ -12,7 +12,7 @@ function useRefForm() {
     console.log(username.current.value, password.current.value)
   }
   return (
-    <div className='w-full h-full flex flex-col  bg-white bg-opacity-10 rounded-lg p-4 '>
+    <div className='w-full h-full flex flex-col justify-between align-center items-center gap-y-2 bg-white bg-opacity-10 rounded-lg p-4 '>
       <h1>useRef Form</h1>
     <form className='w-full h-full flex flex-col gap-y-3 justify-center align-center items-start ' onSubmit={handleSubmit}>
       {/* Passing the reference in input field with ref */}
@@ -22,7 +22,7 @@ function useRefForm() {
       <input className='w-full p-2 rounded-lg ' type="password" id='password' ref={password}/>
       <button type="submit" className='w-full'>Submit</button>
     </form>
-    <div className='w-full p-3 bg-black mt-1 font-bold rounded-lg text-justify'>
+    <div className='w-full p-3 bg-yellow-700 mt-1 font-bold rounded-lg text-justify'>
       See the console to obtain the output.
     </div>
     <div className="mt-2 w-full text-end"><button className="bg-green-700 p-2">Get Code</button></div>

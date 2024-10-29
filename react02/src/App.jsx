@@ -16,8 +16,8 @@ import { ThemeProvider } from "./Level2/context/ThemeContext";
 import Canvas from "./Level2/components/Canvas";
 import { CounterProvider } from "./Level2/context/CounterContext";
 import ParentCounter from "./Level2/components/ParentCounter";
-import ChildCounter from "./Level2/components/ChildCounter";
-import GrandChildCounter from "./Level2/components/GrandChildCounter";
+import UseReducer from "./Level2/UseReducer";
+import UseMemo from "./Level2/UseMemo";
 function App() {
   return (
     <>
@@ -107,6 +107,12 @@ function App() {
           </CounterProvider>
           </div>
         <div className="mt-2 w-full text-end"><button className="bg-green-700 p-2">Get Code</button></div>
+        </div>
+        <div className="bg-white bg-opacity-10 rounded-lg p-3 flex flex-col justify-between gap-y-3">
+          <UseReducer/>
+        </div>
+        <div className="bg-white bg-opacity-10 rounded-lg p-3 flex flex-col justify-between gap-y-3">
+          <UseMemo/>
         </div>
       </div>
     </>

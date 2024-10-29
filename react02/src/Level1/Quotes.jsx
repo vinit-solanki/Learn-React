@@ -28,8 +28,8 @@ function Quotes() {
   }, []);
 
   return (
-    <div className="w-full h-full items-center text-justify justify-between flex flex-col bg-white bg-opacity-10 rounded-lg p-4 text-center items-center gap-y-3">
-      <div className="bg-gray-800 bg-opacity-40 rounded-lg p-8 text-center shadow-lg">
+    <div className="w-full h-full items-center text-justify justify-between flex flex-col bg-white bg-opacity-10 rounded-lg p-4 text-center gap-y-3">
+      <div className="h-full flex flex-col bg-gray-800 bg-opacity-40 rounded-lg p-8 text-center shadow-lg">
         <h1 className="text-4xl font-bold text-white mb-4">Inspiration Hub</h1>
         <p className="text-justify text-xl italic text-gray-300 mb-6">"{quote}" <br /> ~ {author}</p>
         <button
