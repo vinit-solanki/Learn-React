@@ -17,7 +17,6 @@ function App() {
       </div>
       <div className="breaking-div h-1 w-full animate-gradient"></div>
 
-      {/* Transition between Level1 and Level2 */}
       <SwitchTransition>
         <CSSTransition
           key={tab}
