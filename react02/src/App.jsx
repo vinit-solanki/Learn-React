@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './App.css';
-import Level1 from "./Level1";
-import Level2 from "./Level2";
+import Level1 from "./Level1Tab";
+import Level2 from "./Level2Tab";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 
 function App() {
