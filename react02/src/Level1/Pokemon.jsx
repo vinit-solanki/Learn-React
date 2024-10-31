@@ -71,7 +71,7 @@ function Pokemon() {
           </div>
         </div>
       </div>
-      <div className="mt-2 w-full text-end"><button className="bg-green-700 p-2">Get Code</button></div>
+      <div className="mt-2 w-full text-end"><a href="" style={{textDecorationStyle:"none", color:"white", fontWeight: "semi-bold"}}><button className="bg-green-700 p-2">Get Code</button></a></div>
     </div>
   ) : (
     <div className="w-full h-full items-center text-justify justify-between flex flex-col bg-white bg-opacity-10 rounded-lg p-4 text-center items-center gap-y-2">

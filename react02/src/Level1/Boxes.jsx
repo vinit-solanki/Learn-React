@@ -29,7 +29,7 @@ function Boxes({numBoxes}) {
       <button className='w-3/4 bg-red-700' onClick={reset}>Reset</button>
         
       <div className="w-full text-end">
-            <button className="bg-green-700 p-2">Get Code</button>
+            <a href="" style={{textDecorationStyle:"none", color:"white", fontWeight: "semi-bold"}}><button className="bg-green-700 p-2">Get Code</button></a>
          </div>
     </div>
   );

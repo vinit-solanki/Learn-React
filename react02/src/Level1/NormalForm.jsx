@@ -41,7 +41,7 @@ function NormalForm() {
         />
       </div>
       <button type="submit" onClick={handleLog} className="w-full bg-red-700 font-bold">Submit</button>
-    <div className="w-full flex justify-end items-end"><button className="text-end bg-green-700 p-2">Get Code</button></div>
+    <div className="w-full flex justify-end items-end"><a href="" style={{textDecorationStyle:"none", color:"white", fontWeight: "semi-bold"}}><button className="bg-green-700 p-2">Get Code</button></a></div>
     </form>
   )
 }

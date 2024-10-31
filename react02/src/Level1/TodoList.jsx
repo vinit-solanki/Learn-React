@@ -54,7 +54,7 @@ const handleDelete = ()=>{
         <button onClick={handleDelete} className='bg-red-700 rounded px-2 py-1 cursor-pointer'>Delete All.</button>
         </div>
         <div className="w-full text-end">
-            <button className="bg-green-700 p-2">Get Code</button>
+        <a href="" style={{textDecorationStyle:"none", color:"white", fontWeight: "semi-bold"}}><button className="bg-green-700 p-2">Get Code</button></a>
          </div>
     </div>
   )

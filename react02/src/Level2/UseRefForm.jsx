@@ -25,7 +25,7 @@ function useRefForm() {
     <div className='w-full p-3 bg-yellow-700 mt-1 font-bold rounded-lg text-justify'>
       See the console to obtain the output.
     </div>
-    <div className="mt-2 w-full text-end"><button className="bg-green-700 p-2">Get Code</button></div>
+    <div className="mt-2 w-full text-end"><a href="" style={{textDecorationStyle:"none", color:"white", fontWeight: "semi-bold"}}><button className="bg-green-700 p-2">Get Code</button></a></div>
     </div>
   )
 }

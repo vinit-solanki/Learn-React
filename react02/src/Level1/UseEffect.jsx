@@ -33,7 +33,7 @@ function UseEffect() {
             </div>
             <button className='bg-yellow-600' onClick={()=>setCount((prev)=>prev+1)}>Change Count</button>
         </div>
-        <div className="w-full text-end"><button className="bg-green-700 p-2">Get Code</button></div>
+        <div className="w-full text-end"><a href="" style={{textDecorationStyle:"none", color:"white", fontWeight: "semi-bold"}}><button className="bg-green-700 p-2">Get Code</button></a></div>
     </div>
   )
 }
