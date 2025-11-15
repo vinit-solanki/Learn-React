@@ -6,7 +6,7 @@ export default function Battle() {
   const [userPokemon, setUserPokemon] = useState(null);
   const [cpuPokemon, setCpuPokemon] = useState(null);
 
-  const [userWins, setUserWins] = useWins(0);
+  const [userWins, setUserWins] = useState(0);
   const [cpuWins, setCpuWins] = useState(0);
   const [result, setResult] = useState("");
 
@@ -33,12 +33,15 @@ export default function Battle() {
 
   const startRound = () => {
     if (allPokemon.length === 0) return;
+
     const user = randomPokemon();
     const cpu = randomPokemon();
+
     setUserPokemon(user);
     setCpuPokemon(cpu);
 
     const score = comparePokemons(user, cpu);
+
     if (score > 0) setUserWins((v) => v + 1);
     else if (score < 0) setCpuWins((v) => v + 1);
   };
@@ -83,8 +86,15 @@ export default function Battle() {
       if (userWins > cpuWins) setResult("🏆 You Won the Battle!");
       else if (cpuWins > userWins) setResult("💀 You Lost!");
       else setResult("🤝 It’s a Draw!");
+
+      // Auto-refresh after 2 seconds
+      setTimeout(() => {
+        window.location.reload();
+      }, 2000);
+
       return;
     }
+
     setRound(round + 1);
     startRound();
   };
@@ -104,7 +114,6 @@ export default function Battle() {
       </h2>
 
       <div className="flex flex-col md:flex-row justify-center items-center gap-6">
-        {/* User Card */}
         {userPokemon && (
           <PokemonCardBattle
             pokemon={userPokemon}
@@ -113,16 +122,13 @@ export default function Battle() {
           />
         )}
 
-        {/* VS */}
         <div className="text-5xl font-bold animate-pulse text-red-500">VS</div>
 
-        {/* CPU Card */}
         {cpuPokemon && (
           <PokemonCardBattle pokemon={cpuPokemon} title="Opponent" />
         )}
       </div>
 
-      {/* Next Round / Result */}
       <div className="mt-10 text-center">
         {result ? (
           <div className="text-3xl font-bold mt-6">{result}</div>
@@ -161,9 +167,7 @@ function PokemonCardBattle({ pokemon, title, highlight }) {
         <p>🗡 Attack: {pokemon.stats[1].base_stat}</p>
         <p>📏 Height: {pokemon.height} m</p>
         <p>⚖ Weight: {pokemon.weight} kg</p>
-        <p className="capitalize">
-          🔮 Type: {pokemon.types[0].type.name}
-        </p>
+        <p className="capitalize">🔮 Type: {pokemon.types[0].type.name}</p>
       </div>
     </div>
   );
